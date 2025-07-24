@@ -1,0 +1,85 @@
+[
+  {
+    "id": "1",
+    "title": "3-Bedroom Apartment",
+    "description": "Spacious and modern 3-bedroom apartment...",
+    "price": 250000000,
+    "type": "apartment",
+    "image": "/properties/property1.jpg",
+    "location": "Lekki Phase 1, Lagos"
+
+  },
+{
+    "id": "2",
+    "title": "Shortlet",
+    "description": "For your stay.",
+    "price": 120000,
+    "type": "Shortlet",
+    "image": "/images/img1.jpg",
+    "location": "Ikorodu, Lagos"
+  },
+
+  {
+    "id": "3",
+    "title": "4-Bedroom Duplex",
+    "description": "Spacious and serene environment.",
+    "price": 85000000,
+    "type": "Duplex",
+    "image": "/images/img2.jpg",
+    "location": "Gwarinpa, Abuja"
+  },
+  {
+    "id": "4",
+    "title": "2-Bedroom Apartment",
+    "description": "Modern apartment with 24/7 electricity and water.",
+    "price": 45000000,
+    "type": "Apartment",
+    "image": "/images/img3.jpg",
+    "location": "Lekki Phase 1, Lagos"
+  },
+  {
+    "id": "5",
+    "title": "Land in Ikorodu",
+    "description": "600sqm land, perfect for residential development.",
+    "price": 3000000,
+    "type": "Land",
+    "image": "/images/land.jpg",
+    "location": "Ikorodu, Lagos"
+  },
+  {
+    "id": "6",
+    "title": "4-Bedroom Duplex",
+    "description": "Spacious and serene environment.",
+    "price": 85000000,
+    "type": "Duplex",
+    "image": "/images/img2.jpg",
+    "location": "Gwarinpa, Abuja"
+  },
+   {
+    "id": "7",
+    "title": "2-Bedroom Apartment in Lekki",
+    "description": "Modern apartment with 24/7 electricity and water.",
+    "price": 45000000,
+    "type": "Apartment",
+    "image": "/images/img3.jpg",
+    "location": "Lekki Phase 1, Lagos"
+  },
+  {
+    "id": "8",
+    "title": "Land in Ikorodu",
+    "description": "600sqm land, perfect for residential development.",
+    "price": 3000000,
+    "type": "Land",
+    "image": "/images/land.jpg",
+    "location": "Ikorodu, Lagos"
+  },
+  {
+    "id": "9",
+    "title": "4-Bedroom Duplex in Gwarinpa",
+    "description": "Spacious and serene environment.",
+    "price": 85000000,
+    "type": "Duplex",
+    "image": "/images/img2.jpg",
+    "location": "Gwarinpa, Abuja"
+  }
+]
