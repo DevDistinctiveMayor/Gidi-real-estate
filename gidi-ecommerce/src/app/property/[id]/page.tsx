@@ -3,10 +3,13 @@ import { Metadata } from 'next';
 import properties from '../../../../data/properties.json';
 import Image from 'next/image';
 
-// ✅ Generate dynamic metadata
-// ✅ Fix for dynamic params in Next.js app router
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
-  const { id } = await params; // ✅ Await the params
+// ✅ FIXED: params is not a Promise
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
+  const { id } = params;
   const property = properties.find((p) => p.id === id);
 
   if (!property) {
@@ -40,12 +43,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   };
 }
 
-// ✅ Generate static paths for all properties
+// ✅ Generate static params
 export async function generateStaticParams() {
   return properties.map((p) => ({ id: p.id }));
 }
 
-// ✅ Make this async and pass correct props
+// ✅ Main page component
 export default async function PropertyDetailsPage({
   params,
 }: {
@@ -60,7 +63,11 @@ export default async function PropertyDetailsPage({
   return (
     <div className="p-4 max-w-2xl mx-auto bg-gray-800 text-white rounded-lg shadow-lg mt-10">
       <h1 className="text-2xl font-bold mb-4">{property.title}</h1>
-      <img src={property.image} alt={property.title} className="w-full h-64 object-cover rounded mb-4" />
+      <img
+        src={property.image}
+        alt={property.title}
+        className="w-full h-64 object-cover rounded mb-4"
+      />
       <p className="text-gray-300">{property.description}</p>
       <p className="text-xl text-primary font-bold mt-2">₦{property.price.toLocaleString()}</p>
       <p className="text-green-600 font-semibold mt-1">{property.type}</p>
