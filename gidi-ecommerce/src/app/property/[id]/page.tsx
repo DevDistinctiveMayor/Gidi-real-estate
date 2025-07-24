@@ -1,17 +1,18 @@
 // app/property/[id]/page.tsx
 import { Metadata } from 'next';
-import { Property } from '../../../../types/Property';
 import properties from '../../../../data/properties.json';
 import Image from 'next/image';
 
 // ✅ Generate dynamic metadata
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const property = properties.find((p) => p.id === params.id);
+// ✅ Fix for dynamic params in Next.js app router
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params; // ✅ Await the params
+  const property = properties.find((p) => p.id === id);
 
   if (!property) {
     return {
       title: 'Property Not Found - Gidi Real Estate',
-      description: 'The property you are looking for could not be found.',
+      description: 'This property could not be found.',
     };
   }
 
